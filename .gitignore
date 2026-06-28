@@ -3,3 +3,6 @@
 venv/
 ENV/
 env/
+
+#Generación de vectores
+mi_indice_vectorial/
