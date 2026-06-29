@@ -6,3 +6,6 @@ env/
 
 #Generación de vectores
 mi_indice_vectorial/
+
+#Cache de python por importar programa main
+__pycache__/
