@@ -6,7 +6,7 @@ env/
 
 #Generación de vectores
 mi_indice_vectorial/
-faiss_index_inventario/
+index2_inventario/
 
 #Cache de python por importar programa main
 __pycache__/
