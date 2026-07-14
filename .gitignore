@@ -5,7 +5,7 @@ ENV/
 env/
 
 #Generación de vectores
-mi_indice_vectorial/
+pdf_indice_vectorial/
 index2_inventario/
 
 #Cache de python por importar programa main

@@ -10,7 +10,7 @@ print("Cargando base de datos vectorial...")
 embeddings = GeminiEmbeddingsPuro()
 
 # allow_dangerous_deserialization es necesario para cargar archivos FAISS locales de forma segura
-db = FAISS.load_local("mi_indice_vectorial", embeddings, allow_dangerous_deserialization=True)
+db = FAISS.load_local("pdf_indice_vectorial", embeddings, allow_dangerous_deserialization=True)
 
 # 2. Inicializar el cliente de Gemini para las respuestas de texto
 client = genai.Client()
