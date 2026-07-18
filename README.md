@@ -1,5 +1,15 @@
 # Agente informativo del mercado central 24H
 
+Este proyecto consiste en la creación de un agente inteligente que puede responder preguntas a un usuario dado acerca de un comercio ficticio pero que cumple con documentación realista de una empresa real. Dicho proyecto corresponde al challenge individual del curso de Alura LATAM One Oracle Next Education.
+
+## Comportamiento general y tecnologías utilizadas
+
+Como información de entrada se tienen 4 archivos pdf que corresponden a las políticas de dicha empresa ficticia y un archivo csv que indica el inventario en tienda. Utilizando el lenguaje de programación de Python se crea un programa que sea capaz de leer los archivos de entrada, dividir la información en chunks y realizar una vectorización de la información. Paara realizar dicha vectorización se utiliza una herramienta de IA perteneciente a los servicios de Google AI Studio, dicho modelo es el gemini-embedding-2.
+
+Una vez que la información está vectorizada y contenida en las carpetas de indexación se utiliza el modelo gemini-2.5-flash igual perteneciente a Google AI Studio para desarrollar el chat con el usuario, dicho modelo tiene la tarea de entender las preguntas del usuario, buscar la información en los vectores creados previamente y transformar esa información a texto para poder responderle al usuario.
+
+En adición, se utiliza el IDE de Visual Studio Code para editar, desarrollar el código y crear el entorno Git para posteriormente subirlo a un repositorio público en Github para poder ser consultado en la comunidad. Finalmente el proyecto es subido a la plataforma de Oracle Cloud Infrastructure (OCI) para poder ser consultado por más comunidad. Las evidencias del comportamiento del agente igual son mostradas al final de este documento mientras se utiliza en OCI. 
+
 ## 🚀 Guia rápida para ejecutar el proyecto localmente
 
 Sigue estos pasos para configurar y ejecutar el agente RAG en tu computadora:
