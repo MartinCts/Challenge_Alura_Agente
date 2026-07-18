@@ -19,7 +19,7 @@ db_pdf = FAISS.load_local("pdf_indice_vectorial", embeddings, allow_dangerous_de
 # 3. Inicializar el cliente de Gemini
 client = genai.Client()
 
-print("\n🚀 ¡Agente RAG Integrado Activo!")
+print("\n🚀 ¡Hola, soy el agente informativo del mercado central 24H!")
 print("Puedo responder dudas del inventario y de las políticas al mismo tiempo.")
 print("Escribe tu pregunta (o 'salir' para terminar):\n")
 
