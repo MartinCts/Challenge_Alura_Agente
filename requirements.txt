@@ -3,4 +3,3 @@ google-genai
 langchain-community
 faiss-cpu
 python-dotenv
-ticker-puro
