@@ -1,11 +1,19 @@
 import os
 import time
 from pypdf import PdfReader
+from dotenv import load_dotenv
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_core.embeddings import Embeddings
 from google import genai
 
+load_dotenv()
+try:
+    # Inicializa el cliente usando la GEMINI_API_KEY que cargó el load_dotenv()
+    client = genai.Client() 
+except Exception as e:
+    st.error(f"Error al inicializar el cliente de Gemini: {e}")
+    
 # La clase con control integrado para respetar las 15 peticiones por minuto de Google
 class GeminiEmbeddingsPuro(Embeddings):
     def __init__(self):

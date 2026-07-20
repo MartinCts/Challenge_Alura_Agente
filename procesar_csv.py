@@ -100,6 +100,6 @@ with open(ruta_csv, mode='r', encoding='utf-8-sig') as archivo:
 if vectorstore:
     # Recuerda apuntar tu chat.py a este mismo nombre de carpeta
     vectorstore.save_local("index2_inventario")
-    print(f"✅ ¡Proceso terminado con éxito! Se indexaron {contador} productos con TODAS sus columnas en 'faiss_index_inventario'.")
+    print(f"✅ ¡Proceso terminado con éxito! Se indexaron {contador} productos con TODAS sus columnas en 'index2_inventario'.")
 else:
     print("❌ No se procesó ningún documento.")

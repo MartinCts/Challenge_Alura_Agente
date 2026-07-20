@@ -1,10 +1,18 @@
 import os
 import time
+from dotenv import load_dotenv
 from langchain_community.vectorstores import FAISS
 from google import genai
 
 # Importamos la clase que ya funciona desde tu main.py
 from main import GeminiEmbeddingsPuro
+
+load_dotenv()
+try:
+    # Inicializa el cliente usando la GEMINI_API_KEY que cargó el load_dotenv()
+    client = genai.Client() 
+except Exception as e:
+    st.error(f"Error al inicializar el cliente de Gemini: {e}")
 
 # 1. Inicializar los embeddings compartidos
 embeddings = GeminiEmbeddingsPuro()
