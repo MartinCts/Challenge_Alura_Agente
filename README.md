@@ -55,6 +55,7 @@ https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTuGrBzX4s9Tq9j60HI
 
 ### 2. Fase de Consulta (Ciclo RAG en Tiempo Real)
 Es el flujo dinámico que ocurre cada vez que el usuario escribe en la interfaz de la terminal de `chat.py`:
+```text
 [Usuario] ──> Pregunta en lenguaje natural (Texto)
 │
 ├──> 1. API Gemini (Embedding) ──> Convierte texto a Vector Matemático
@@ -64,6 +65,7 @@ Es el flujo dinámico que ocurre cada vez que el usuario escribe en la interfaz 
 ├──> 3. Construcción del Prompt ─> Combina Pregunta + Contextos Encontrados
 │
 └──> 4. LLM (gemini-2.5-flash) ──> Genera Respuesta Final Fundamentada
+```
 
 1. **Traducción Vectorial:** La pregunta del usuario se convierte instantáneamente en un vector matemático utilizando el mismo modelo de embeddings.
 2. **Búsqueda Semántica Paralela:** El motor de **FAISS** analiza la base de datos del inventario (extrayendo los 4 registros más relevantes) y la base de datos de políticas (extrayendo los 3 fragmentos más cercanos) en milisegundos de forma local.
@@ -90,3 +92,15 @@ Sin embargo, estos presentan limitaciones tanto a la hora de vectorizar como de 
 Así que nuestra primera restricción es la cuota de procesamiento, por eso es que el programa tiene un retraso de 4 segundos para cada vectorización. La vectorización de los 4 pdf toma alrededor de 20 minutos y la del .csv unos 15 minutos.
 
 Por otra parte, el modelo para le chat presenta menos inconvenientes. Algunas veces después de que el usuario hace una pregunta aparece un mensaje que indica que el modelo está temporalemente deshabilitado o lleno, esto ocurre porque al ser un servicio gratuito mucha gente lo utiliza y el servidor está totalmente ocupado, para solventar este problema el usuario simplemente debe esperar algunos segundos y volver a ahcer la misma pregunta, por lo general a la segunda oportunidad el agente responde correctamente.
+
+NOTA: igualmente, debido a las limitaciones de los modelos se pueden hacer unas 20 preguntas al agente por día
+
+## Preguntas de prueba hechas al agente y sus respectivas respuestas
+### Preguntas como cliente
+* ¿En qué pasillo encuentro el arroz?
+* ¿Qúe pasta dental es la más barata?
+* ¿Tengo estacionamiento grátis?
+### Preguntas como empleado
+* ¿Cuál es la misión de mercado central 24H?
+* ¿Cuál es el stock de azucar?
+* Si he trabajado 20 años ¿cuántos días de vacaciones tengo?
