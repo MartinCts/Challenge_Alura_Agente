@@ -37,6 +37,15 @@ Sigue estos pasos para configurar y ejecutar el agente RAG en tu computadora:
 6. **Iniciar el chat con el agente**
   python chat.py
 
+## 🚀 Guia para ejecutar el proyecto en la plataforma de Streamlit
+
+Se puede acceder directamente al siguiente link y probar a preguntar al agente a través de la plataforma de Streamlink. Nota: debido a la cuenta gratuita de Google AI Studio el agente tiene limitaciones de respuestas, aproximadamente puede responder unas 20 preguntas por día. Otra cosa a considerar es que las apps subidas a Streamlit pueden entrar a un estado "sleep" debido a inactividad, si se encuentra en ese caso solo de click en el botón "wake-up" para que el agente se vuelva a ejecutar. 
+
+https://challengealuraagente-cwbayfmgtgdwzrsvwcms9f.streamlit.app/
+
+<img width="1908" height="1032" alt="Captura de pantalla 2026-07-20 175523" src="https://github.com/user-attachments/assets/4d127d91-7ab4-4616-ad8e-b80bd9e2bd55" />
+
+
 ## Flujo de trabajo y arquitectura
 
 El proyecto está diseñado bajo la arquitectura **RAG (Generación Aumentada por Recuperación)**. Esto permite combinar la capacidad de redacción natural de un Modelo de Lenguaje Grande (LLM) con el conocimiento específico, privado y actualizado de nuestra empresa, almacenado en archivos locales sin exponer datos confidenciales a reentrenamientos públicos.
@@ -104,3 +113,9 @@ NOTA: igualmente, debido a las limitaciones de los modelos se pueden hacer unas 
 * ¿Cuál es la misión de mercado central 24H?
 * ¿Cuál es el stock de azucar?
 * Si he trabajado 20 años ¿cuántos días de vacaciones tengo?
+
+Video de demostración:
+
+https://github.com/user-attachments/assets/9c23fb82-cbb3-4253-85cc-8315ce250a8f
+
+
